@@ -432,41 +432,7 @@
         $('#checkout_coupon').slideToggle(400);
     });
 
-    $('#contact-us-message__form').submit(function(event) {
-        event.preventDefault();
-        var form = $(this);
-        var valid = true;
-
-        form.find('.error-message').remove();
-        form.find('.success-message').remove();
-
-        form.find('input, textarea, select').each(function() {
-            if ($(this).val().trim() === '') {
-                valid = false;
-                $(this).parent().after('<p class="error-message  mt-3 mb-0">This field is required.</p>');
-            }
-        });
-
-        if (!valid) {
-            return;
-        }
-
-        $('.loading-form').show();
-
-        setTimeout(function() {
-            $.ajax({
-                type: form.attr('method'),
-                url: form.attr('action'),
-                data: form.serialize()
-            }).done(function(data) {
-                $('.loading-form').hide();
-                form.append('<p class="success-message mt-3 mb-0">Your message has been sent successfully.</p>');
-            }).fail(function(data) {
-                $('.loading-form').hide();
-                form.append('<p class="error-message mt-3 mb-0">Something went wrong. Please try again later.</p>');
-            });
-        }, 1000);
-    });
+    
 
 
 })(jQuery);

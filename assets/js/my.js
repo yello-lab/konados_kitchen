@@ -157,3 +157,24 @@ if (window.location.pathname.includes("shop-details.html")) {
     }
 
 
+    function contact_message() {
+
+        // Get values using the correct IDs from your form
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message_ = document.getElementById("textarea").value;  // Changed from "message" to "textarea"
+        const subject = document.getElementById("subject").value;
+    
+        // Construct the WhatsApp message
+        const message = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage: ${message_}`;
+    
+        // Encode the message for the URL
+        const encodedMessage = encodeURIComponent(message);
+    
+        // Open WhatsApp with the pre-filled message
+        const whatsappUrl = `https://wa.me/+233549031201?text=${encodedMessage}`;
+        window.open(whatsappUrl, "_blank");
+        
+        // Prevent the form from submitting normally
+        return false;
+    }
