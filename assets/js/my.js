@@ -145,7 +145,7 @@ if (window.location.pathname.includes("shop-details.html")) {
 
           
             // Construct the WhatsApp message with the image URL as a clickable link
-            const message = `Hello, I would like to make the following order:\n\nFood Name: ${foodName}\nQuantity: ${foodQuantity.value}\nPrice: ₵${foodPrice.innerText}\nImage: https://raw.githubusercontent.com/yello-lab/konados_kitchen/refs/heads/master/assets/imgs/food-menu/${foodNamea.split(" ").join("%20")}.jpg`;
+            const message = `Hello, I would like to make the following order:\n\nFood Name: ${foodName}\nQuantity: ${foodQuantity.value}\nPrice: ${foodPrice.innerText}\nImage: https://raw.githubusercontent.com/yello-lab/konados_kitchen/refs/heads/master/assets/imgs/food-menu/${foodName.split(" ").join("%20")}.jpg`;
 
             // Encode the message for the URL
             const encodedMessage = encodeURIComponent(message);
