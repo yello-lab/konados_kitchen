@@ -297,7 +297,7 @@
         }
     }); 
 
-    $('.checkout-form__item-input-select select, .contact-us-message__form-input-select select, .book-a-table-3__select select, .book-a-table__content-form__select select, .header__lang__select select, .banner-3__book-a-table__select select, .book-a-table-2__form__select select').niceSelect();
+    $('.checkout-form__item-input-select select,.book-a-table-3__select select, .book-a-table__content-form__select select, .header__lang__select select, .banner-3__book-a-table__select select, .book-a-table-2__form__select select').niceSelect();
     $( "#datepicker" ).datepicker({
         dateFormat: "y-mm-dd"
     });
